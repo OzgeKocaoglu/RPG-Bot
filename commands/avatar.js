@@ -1,9 +1,5 @@
 
-module.exports = {
-	name: 'avatar',
-	aliases: ['icon', 'pfp'],
-	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
-	execute(message) {
+module.exports.run = async (client, message, args) => {
 		if (!message.mentions.users.size) {
 			return message.channel.send(`Your avatar: ${message.author.displayAvatarURL({ dynamic: true })}`);
 		}
@@ -13,5 +9,11 @@ module.exports = {
 		});
 
 		message.channel.send(avatarList);
-	},
 };
+
+exports.help = {
+	name: 'avatar',
+	aliases: ['icon', 'pfp'],
+	description: 'Get the avatar URL of the tagged user(s), or your own avatar.',
+
+  }

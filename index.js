@@ -1,50 +1,63 @@
 const fs = require('fs');
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({disableEveryone: true});
 const {prefix, token } = require ('./config.json')
+
 client.commands = new Discord.Collection();
+client.aliases = new Discord.Collection();
 
-const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+exports.conf = {
+	aliases: ['Stuff', 'AlsoStuff']
+	};
+	exports.help = {
+	name: "More Stuff", description: "SillyStuff.", usage: ".SeriousStuff"
+	}
 
-for (const file of commandFiles) {
-	const command = require(`./commands/${file}`);
-	client.commands.set(command.name, command);
-}
+fs.readdir("./commands/", (err, files) => {
+	if(err) console.log(err);
 
-client.on('ready', () => {
-    console.log('The client is ready!')
+	let jsfile = files.filter( f=> f.split(".").pop() === "js");
+	if(jsfile.length <= 0){
+		return console.log("Komut bulunmadı");
+	}
+
+	jsfile.forEach((f) =>{
+		let props = require(`./commands/${f}`);
+		console.log(`${f} loaded`);
+		client.commands.set(props.help.name, props);
+
+		props.help.aliases.forEach(alias => {
+			client.aliases.set(alias, props.help.name);
+		})
+	})
 })
 
-client.on('message', message => {
-	if (!message.content.startsWith(prefix) || message.author.bot) return;
+client.on('ready', async() => {
+	console.log(`${client.user.username} is online on ${client.guide.cache.size} servers`);
+	client.user.setActivity(`with Olympus RPG!`);
+})
 
+
+client.on('message', async message => {
+
+	if (!message.content.startsWith(prefix) || message.author.client) return;
 	const args = message.content.slice(prefix.length).trim().split(/ +/);
-	const commandName = args.shift().toLowerCase();
+	const cmd = args.shift().toLowerCase();
+	let command;
 
+	if(client.commands.has(cmd)){
+		command = client.commands.get(cmd);
+	}
+	else if(client.aliases.has(cmd)){
+		command = client.commands.get(client.aliases.get(cmd));
+	}
 
-    const command = client.commands.get(commandName)
-		|| client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName));
-    	if (!command) return;
-
-    if (command.args && !args.length) {
-        let reply = `You didn't provide any arguments, ${message.author}!`;
-
-		if (command.usage) {
-			reply += `\nThe proper usage would be: \`${prefix}${command.name} ${command.usage}\``;
-		}
-
-		return message.channel.send(reply);
-    }
-
-    if (command.guildOnly && message.channel.type === 'test') {
-        return message.reply('I can\'t execute that command inside Tests!');
-    }
 
 	try {
-		command.execute(message, args);
+		command.run(client, message, args);
 	} catch (error) {
 		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+		message.reply('Bir sıkıntı çıktı. Birkaç ölümlü yılı bekle, döneceğim.');
 	}
 });
 
