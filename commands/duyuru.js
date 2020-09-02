@@ -4,7 +4,7 @@ const Discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
         let argresult;
-        let mChannel = message.mentions.channel.first()
+        let mChannel = message.mentions.channel.first();
         if(!argresult) return message.channel.send('Bir duyuru gir');
 
         message.delete()
@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) =>{
 
 exports.help = {
     name: 'duyuru',
-    aliases: ['icon', 'pfp'],
+    aliases: ['duyuru'],
     description: 'duyuru komutu',
 
   }

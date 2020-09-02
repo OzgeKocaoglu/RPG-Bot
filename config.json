@@ -1,4 +1,5 @@
 {
     "prefix" : "!",
-    "token" : "NzQ5ODE1NTM5Mjk5NTE2NDY3.X0xeIw.xARlWl7bmnLJ9HVNmPH6X_ivDHY"
+    "token" : "NzQ5ODE1NTM5Mjk5NTE2NDY3.X0xeIw.xARlWl7bmnLJ9HVNmPH6X_ivDHY",
+    "mongoPass": "mongodb+srv://persephoneDB:Masa1234*@rpgbot.jrtro.mongodb.net/<dbname>?retryWrites=true&w=majority" 
 }

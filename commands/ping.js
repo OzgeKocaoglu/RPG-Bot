@@ -3,8 +3,8 @@ module.exports.run = async (client, message, args) =>{
 };
 
 exports.help = {
-    name: 'duyuru',
-    aliases: ['icon', 'pfp'],
+    name: 'ping',
+    aliases: ['ping'],
     description: 'duyuru komutu',
 
   }

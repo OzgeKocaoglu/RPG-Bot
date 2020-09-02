@@ -1,17 +1,12 @@
-const fs = require('fs');
+
 const Discord = require('discord.js');
 const client = new Discord.Client({disableEveryone: true});
-const {prefix, token } = require ('./config.json')
+const {prefix, token } = require ('./config.json');
+const fs = require('fs');
 
 client.commands = new Discord.Collection();
 client.aliases = new Discord.Collection();
 
-exports.conf = {
-	aliases: ['Stuff', 'AlsoStuff']
-	};
-	exports.help = {
-	name: "More Stuff", description: "SillyStuff.", usage: ".SeriousStuff"
-	}
 
 fs.readdir("./commands/", (err, files) => {
 	if(err) console.log(err);
@@ -33,16 +28,19 @@ fs.readdir("./commands/", (err, files) => {
 })
 
 client.on('ready', async() => {
-	console.log(`${client.user.username} is online on ${client.guide.cache.size} servers`);
+	console.log(`${client.user.username} is online`);
 	client.user.setActivity(`with Olympus RPG!`);
 })
 
 
+
+
+
 client.on('message', async message => {
 
-	if (!message.content.startsWith(prefix) || message.author.client) return;
-	const args = message.content.slice(prefix.length).trim().split(/ +/);
-	const cmd = args.shift().toLowerCase();
+	if (!message.content.startsWith(prefix)) return;
+	let args = message.content.slice(prefix.length).trim().split(/ +/);
+	let cmd = args.shift().toLowerCase();
 	let command;
 
 	if(client.commands.has(cmd)){
@@ -55,9 +53,8 @@ client.on('message', async message => {
 
 	try {
 		command.run(client, message, args);
-	} catch (error) {
-		console.error(error);
-		message.reply('Bir sıkıntı çıktı. Birkaç ölümlü yılı bekle, döneceğim.');
+	} catch (e) {
+		return;
 	}
 });
 
