@@ -18,16 +18,16 @@ console.log(message.author.roles);
     Data.findOne({
         userID: message.author.id
     }, (err, data) => {
-            if(data.drachma < 20){
+            if(data.drachma < 25){
                 return message.channel.send("Yeterli dramin yok fani. Şimdi seni toz etmeden yok ol!");
             }
             else{
-                if(message.member.roles.cache.some(r => r.name === "Bakır Ok")) return message.channel.send("Bakır oklarını görüyorum. Yenisini alma.");
-                message.member.roles.add("751059131082735648");
-                data.drachma -= 20;
+                if(message.member.roles.cache.some(r => r.name === "Bakır Yay")) return message.channel.send("Aldığın yay sana yetmedi mi? Kaybol gözümün önünden");
+                message.member.roles.add("751059132106408016");
+                data.drachma -= 25;
                 Drachma = data.drachma;
                 data.save({_id: data.id, drachma: Drachma});
-                return message.channel.send(`Bakır okları satın aldın, şimdi kör etmeden atış yapabileceğini gösterme vakti! ${data.drachma} dramin kaldı.`);
+                return message.channel.send(`Bakır yay satın aldın, şimdi bu yaylara ok alma vakti! ${data.drachma} dramin kaldı.`);
 
             }
     })
@@ -37,6 +37,6 @@ console.log(message.author.roles);
 
 
 module.exports.help = {
-    name: "satın-al-bakır-ok",
-    aliases: ["bakırok", "satın al"]
+    name: "bakıryay",
+    aliases: []
 }

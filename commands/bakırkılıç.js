@@ -22,12 +22,12 @@ console.log(message.author.roles);
                 return message.channel.send("Yeterli dramin yok fani. Şimdi seni toz etmeden yok ol!");
             }
             else{
-                if(message.member.roles.cache.some(r => r.name === "Bakır Kalkan")) return message.channel.send("Elindeki tahta şey kalkan değil mi? Yenisini alamazsın.");
-                message.member.roles.add("751059133150527510");
+                if(message.member.roles.cache.some(r => r.name === "Bakır Kılıç")) return message.channel.send("Zaten bir bakır kılıcın var. Bu kadar melezin arasında seninle mi uğraşacağım? Kaybol.");
+                message.member.roles.add("751059132542353470");
                 data.drachma -= 40;
                 Drachma = data.drachma;
                 data.save({_id: data.id, drachma: Drachma});
-                return message.channel.send(`Bakır kalkan satın aldın. Savunma yapmayı da öğrenme vakti! ${data.drachma} dramin kaldı.`);
+                return message.channel.send(`Hadi diğer melezlerle kılıçlarınızı kapıştırın bakalım. Keskinliğine dikkat et. Kılıçlar şakaya gelmez! ${data.drachma} dramin kaldı.`);
 
             }
     })
@@ -37,6 +37,6 @@ console.log(message.author.roles);
 
 
 module.exports.help = {
-    name: "satın-al-bakır-kalkan",
-    aliases: ["bakırkalkan", "satın al"]
+    name: "bakırkılıç",
+    aliases: ["bakırk"]
 }

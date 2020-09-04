@@ -18,16 +18,16 @@ console.log(message.author.roles);
     Data.findOne({
         userID: message.author.id
     }, (err, data) => {
-            if(data.drachma < 40){
+            if(data.drachma < 200){
                 return message.channel.send("Yeterli dramin yok fani. Şimdi seni toz etmeden yok ol!");
             }
             else{
-                if(message.member.roles.cache.some(r => r.name === "Bakır Kılıç")) return message.channel.send("Talim yaptığın küçük şey, bir tahta kılıç. Kendini ve diğerlerini yaralamaman için şimdilik bunu veriyoruz. Yenisini isteme!");
-                message.member.roles.add("751059132542353470");
-                data.drachma -= 40;
+                if(message.member.roles.cache.some(r => r.name === "Stygian Kalkan")) return message.channel.send("Ölümsüz olmaya mı çalışıyorsun yarı fani? İki Stygian kalkanı seni belki korurdu ancak bir tanesini ancak benden alabilirsin. İkincisini veremem.");
+                message.member.roles.add("751059977837346897");
+                data.drachma -= 200;
                 Drachma = data.drachma;
                 data.save({_id: data.id, drachma: Drachma});
-                return message.channel.send(`Hadi diğer melezlerle kılıçlarınızı kapıştırın bakalım. Keskinliğine dikkat et. Kılıçlar şakaya gelmez! ${data.drachma} dramin kaldı.`);
+                return message.channel.send(`Stygian kalkanına sahipsin. Artık en keskin kılıçlar bile eğer doğru kullanırsan yolunu bulamaz. ${data.drachma} dramin kaldı.`);
 
             }
     })
@@ -37,6 +37,6 @@ console.log(message.author.roles);
 
 
 module.exports.help = {
-    name: "satın-al-bakır-kılıç",
-    aliases: ["bakırkılıç", "satın al"]
+    name: "stygiankalkan",
+    aliases: []
 }
