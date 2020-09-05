@@ -38,8 +38,8 @@ client.on('ready', async() => {
 
 client.on('message', async message => {
 
-	if (!message.content.startsWith(prefix)) return;
-	let args = message.content.slice(prefix.length).trim().split(/ +/);
+	if (!message.content.startsWith(process.env.prefix)) return;
+	let args = message.content.slice(process.env.prefix.length).trim().split(/ +/);
 	let cmd = args.shift().toLowerCase();
 	let command;
 
@@ -60,4 +60,4 @@ client.on('message', async message => {
 
 
 
-client.login(token);
+client.login(process.env.token);

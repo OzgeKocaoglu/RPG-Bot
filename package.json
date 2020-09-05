@@ -10,16 +10,18 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/OzgeKocaoglu/RPG-Bot.git"
   },
-  "author": "",
+  "author": "Ozge Kocaoglu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/OzgeKocaoglu/RPG-Bot/issues"
   },
-  "homepage": "https://github.com/OzgeKocaoglu/RPG-Bot#readme"
+  "homepage": "https://github.com/OzgeKocaoglu/RPG-Bot#readme",
+  "keywords": []
 }

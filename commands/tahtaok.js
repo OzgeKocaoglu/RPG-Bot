@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
-const config = require("../config.json");
+//const config = require("../config.json");
 const Discord = require('discord.js');
 
-mongoose.connect(config.mongoPass, {
+mongoose.connect(process.env.mongoPass, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
