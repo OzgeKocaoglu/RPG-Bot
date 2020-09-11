@@ -1,7 +1,6 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client({disableEveryone: true});
-const {prefix, token } = require ('./config.json');
 const fs = require('fs');
 
 client.commands = new Discord.Collection();
@@ -38,8 +37,8 @@ client.on('ready', async() => {
 
 client.on('message', async message => {
 
-	if (!message.content.startsWith(process.env.prefix)) return;
-	let args = message.content.slice(process.env.prefix.length).trim().split(/ +/);
+	if (!message.content.startsWith(process.env.PREFIX)) return;
+	let args = message.content.slice(process.env.PREFIX.length).trim().split(/ +/);
 	let cmd = args.shift().toLowerCase();
 	let command;
 
@@ -60,4 +59,4 @@ client.on('message', async message => {
 
 
 
-client.login(process.env.token);
+client.login(process.env.TOKEN);

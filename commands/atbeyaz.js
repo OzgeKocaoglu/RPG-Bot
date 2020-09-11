@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-//const config = require("../config.json");
 const Discord = require('discord.js');
 
 mongoose.connect(process.env.mongoPass, {
