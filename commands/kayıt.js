@@ -16,10 +16,16 @@ module.exports.run = async (client, message, args) =>{
         }
 
         if(!member) return message.reply("Sunucuda böyle bir kullanıcı yok.");
-        member.roles.add("754300516770775143")
-        member.roles.add("751059991833608294")
-        return message.reply("Kayıt başarıyla tamamlandı.");
-        
+        if(!member.roles.cache.some(r=>r.name === "Yarı Tanrı")){
+            member.roles.add("754300516770775143")
+            member.roles.add("751059991833608294")
+            return message.reply("Kayıt başarıyla tamamlandı.");
+            
+        }else{
+            return message.reply("Bu kullanıcının kaydı zaten yapılmış");
+        }
+
+      
     }
     else{
         return message.channel.send("Buna iznin yok fani, kaybol gözümün önünden!");

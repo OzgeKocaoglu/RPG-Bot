@@ -18,7 +18,7 @@ module.exports.run = async (client, message, args) =>{
         .setFooter('Olympus RPG', 'https://i.hizliresim.com/esuGEM.gif');
 
 
-        let annouceChannel = client.channels.cache.get(`749844028648062986`);
+        let annouceChannel = client.channels.cache.get(`755416698030391358`);
         if(!annouceChannel) return message.reply("Kanal yok!");
         annouceChannel.send(`@everyone`)
         annouceChannel.send(annouceEmbed)
