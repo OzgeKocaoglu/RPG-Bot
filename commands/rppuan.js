@@ -6,7 +6,7 @@ module.exports.run = async (client, message, args) =>{
         userID: message.author.id
     });
 
-    message.channel.send(`${messages.messages}`);
+    message.channel.send(`${message.author.nickname}'in RP Puanı: ${messages.messages}`);
 };
 
 exports.help = {
