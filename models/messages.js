@@ -3,7 +3,8 @@ const mongoose = require("mongoose");
 const messageSchema = new mongoose.Schema({
     userID: String,
     messages: Number,
-    name: String
+    name: String,
+    lastChannel: String,
 
 })
 
