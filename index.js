@@ -200,7 +200,7 @@ client.on('message', async message => {
 				userID: message.author.id
 			}, async (err, dUser) => {
 				dUser.messages += number;
-				dUser.lastChannel += message.channel.name,
+				dUser.lastChannel = message.channel.name,
 				await dUser.save().catch(e => console.log(e));
 			})
 
