@@ -191,6 +191,7 @@ client.on('message', async message => {
 					messages: 0,
 					name: message.author.username,
 					lastChannel: message.channel.name,
+					serverID: message.guild.id,
 				});
 				await messageUser.save().catch(e => console.log(e));
 

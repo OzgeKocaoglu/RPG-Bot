@@ -5,6 +5,7 @@ const messageSchema = new mongoose.Schema({
     messages: Number,
     name: String,
     lastChannel: String,
+    serverID: String,
 
 })
 

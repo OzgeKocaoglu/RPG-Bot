@@ -20,7 +20,7 @@ module.exports.run = async (client, message, args) =>{
         if(!member.roles.cache.some(r=>r.name === "Yarı Tanrı")){
             member.roles.add("754300516770775143")
             member.roles.add("751059991833608294")
-            member.roles.remove("750665374474960929");
+            member.roles.remove("750665374474960929");      
             registerChannel.send(`${message.member.nickname} başarılı bir şekilde ${member.nickname}'i kaydetti.`)
             return message.reply("Kayıt başarıyla tamamlandı.");
             
