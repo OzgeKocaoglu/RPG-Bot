@@ -35,7 +35,7 @@ module.exports.run = async (bot, message, args) => {
            data.drachma += number;
            Drachma = data.drachma;
            data.save({_id: data.id, drachma: Drachma});
-           return message.reply(`Başarılı bir şekilde ${member.nickname}'e ${args[1]} drami eklendi. Şimdiki bakiye: ${data.drachma}`);
+           return message.reply(`Başarılı bir şekilde ${member}'e ${args[1]} drami eklendi. Şimdiki bakiye: ${data.drachma}`);
         }
     })
 

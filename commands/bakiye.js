@@ -41,7 +41,7 @@ module.exports.run = async (bot, message, args) => {
                     .setColor('#d6f797')
                     .setTitle(`Prometheus Bankası`)
                     .setThumbnail('https://i.hizliresim.com/fmW14a.png')
-                    .setDescription(`Merhaba fani, şimdilik senin ${data.drachma} drahmin var.`)
+                    .setDescription(`Merhaba ${message.author}, şimdilik senin ${data.drachma} drahmin var.`)
                     .setImage('https://i.pinimg.com/originals/9c/e2/0b/9ce20b95117f447af7d652be360bc00e.gif')
                     .setFooter('Olympus RPG', 'https://i.hizliresim.com/esuGEM.gif');
                 return message.channel.send(exampleEmbed);
@@ -70,7 +70,7 @@ module.exports.run = async (bot, message, args) => {
                     .setColor('#d6f797')
                     .setTitle(`Prometheus Bankası`)
                     .setThumbnail('https://i.hizliresim.com/fmW14a.png')
-                    .setDescription(`Merhaba fani, şimdilik ${member.nickname}'in ${data.drachma} drahmin var.`)
+                    .setDescription(`Merhaba ${message.author}, şimdilik ${member}'in ${data.drachma} drahmisi var.`)
                     .setImage('https://i.pinimg.com/originals/9c/e2/0b/9ce20b95117f447af7d652be360bc00e.gif')
                     .setFooter('Olympus RPG', 'https://i.hizliresim.com/esuGEM.gif');
                 return message.channel.send(exampleEmbed);

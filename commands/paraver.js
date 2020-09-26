@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
               if(isNaN(args[1])) return message.reply('Bu geçerli bir para birimi değil.')
               let number = parseInt(args[1])
              
-              if(senderData.drachma < number) return message.reply("Girdiğin miktar kadar banka hesabında drami yok. Aktarım iptal edildi.")
+              if(senderData.drachma < number) return message.reply("Girdiğin miktar kadar banka hesabında drahmi yok. Aktarım iptal edildi.")
               else{
                 Data.findOne({
                     userID: member.id
@@ -45,13 +45,13 @@ module.exports.run = async (bot, message, args) => {
                        data.drachma += number;
                        Drachma = data.drachma;
                        data.save({_id: data.id, drachma: Drachma});
-                       message.channel.send(`Başarılı bir şekilde ${member.nickname}'e ${args[1]} drami eklendi. ${member.nickname}'in şimdiki bakiyesi: ${data.drachma}`);
+                       message.channel.send(`Başarılı bir şekilde ${member}'e ${args[1]} drami eklendi. ${member}'in şimdiki bakiyesi: ${data.drachma}`);
                     }
                 })
                 senderData.drachma -=number;
                 Drachma = senderData.drachma;
                 data.save({_id: senderData.id, drachma: Drachma});
-                return message.reply(`\n Başarılı bir şekilde ${message.member.nickname}'den ${args[1]} drami gönderildi. @${message.member.nickname}'in şimdiki bakiyesi: ${data.drachma}`);
+                return message.channel.send(`\n Başarılı bir şekilde ${message.author}'den ${args[1]} drami gönderildi. ${message.author}'in şimdiki bakiyesi: ${data.drachma}`);
                 
               }
               
