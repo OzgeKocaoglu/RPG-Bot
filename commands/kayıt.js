@@ -14,7 +14,7 @@ module.exports.run = async (client, message, args) =>{
         }catch{
             member = null;
         }
-        let nickname = args[1];
+        let nickname = args[1] +"  "+ args[2] +"  "+ args[3];
         if(!nickname) return message.reply("Kayıt için bir kullanıcı adı giriniz.");
         let registerChannel = client.channels.cache.get(`755320986508984330`);
         if(!member) return message.reply("Sunucuda böyle bir kullanıcı yok.");

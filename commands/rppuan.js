@@ -8,7 +8,7 @@ module.exports.run = async (client, message, args) => {
             userID: message.author.id
         });
 
-        message.channel.send(`RP Puanın: ${messages.messages}`);
+        message.channel.send(`${message.author}, rp puanın: ${messages.messages}`);
     }
 
         else{
@@ -30,7 +30,7 @@ module.exports.run = async (client, message, args) => {
                     message.channel.send("Bu kullanıcı henüz rp yapmamış.");
                 }
                 else{
-                    message.channel.send(`${member.nickname}'in RP Puanı: ${messageUser.messages}`);
+                    message.channel.send(`${member}'in rp puanı: ${messageUser.messages}`);
                 }
                 
         }

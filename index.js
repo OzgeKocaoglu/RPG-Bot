@@ -196,12 +196,16 @@ client.on('message', async message => {
 				await messageUser.save().catch(e => console.log(e));
 
 			}
+			let logChannel = client.channels.cache.get(`754459813253218324`);
+			if (!logChannel) return message.reply("Kanal yok!");
+
 			await Messages.findOne({
 				userID: message.author.id
 			}, async (err, dUser) => {
 				dUser.messages += number;
-				dUser.lastChannel = message.channel.name,
-					await dUser.save().catch(e => console.log(e));
+				dUser.lastChannel = message.channel.name;
+				logChannel.send(`${message.author}, ${beforeChannel} kanalından ${dUser.lastChannel} kanalına geçti.`)
+				await dUser.save().catch(e => console.log(e));
 			})
 
 

@@ -29,7 +29,7 @@ module.exports.run = async (client, message, args) =>{
                 message.channel.send("Bu kullanıcı henüz rp yapmamış.");
             }
             else{
-                message.channel.send(`${member.nickname}'in en son rp yapılan kanal: ${messageUser.lastChannel}`);
+                message.channel.send(`${member}'in en son rp yapılan kanal: ${messageUser.lastChannel}`);
             }
             
     }
