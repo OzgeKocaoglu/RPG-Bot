@@ -37,7 +37,7 @@ fs.readdir("./commands/", (err, files) => {
 client.on('ready', async () => {
 	console.log(`${client.user.username} is online`);
 	client.user.setStatus('idle');
-	client.user.setActivity(`with Olympus RPG!`);
+	client.user.setActivity(`with Percy Jackson RPG!`);
 
 })
 
@@ -183,6 +183,8 @@ client.on('message', async message => {
 				userID: message.author.id
 			});
 
+			let beforeChannel = messageUser.lastChannel;
+
 			let args = message.content.slice().trim().split(/ +/);
 			let number = args.length;
 			if (!messageUser) {
@@ -199,14 +201,15 @@ client.on('message', async message => {
 			let logChannel = client.channels.cache.get(`754459813253218324`);
 			if (!logChannel) return message.reply("Kanal yok!");
 
-			await Messages.findOne({
+			let user = await Messages.findOne({
 				userID: message.author.id
 			}, async (err, dUser) => {
 				dUser.messages += number;
 				dUser.lastChannel = message.channel.name;
-				logChannel.send(`${message.author}, ${beforeChannel} kanalından ${dUser.lastChannel} kanalına geçti.`)
 				await dUser.save().catch(e => console.log(e));
 			})
+
+			logChannel.send(`${message.author}, ${beforeChannel} kanalından ${user.lastChannel} kanalına geçti.`)
 
 
 		}
