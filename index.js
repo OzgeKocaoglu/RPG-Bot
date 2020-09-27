@@ -1,6 +1,6 @@
 
 const Discord = require('discord.js');
-const client = new Discord.Client({ disableEveryone: true });
+const client = new Discord.Client({ disableEveryone: true, partials: ['MESSAGE'] });
 const fs = require('fs');
 const mongoose = require('mongoose');
 
@@ -41,10 +41,6 @@ client.on('ready', async () => {
 
 })
 
-
-
-
-
 client.on('message', async message => {
 
 	//Melez Kampı.
@@ -56,6 +52,8 @@ client.on('message', async message => {
 	let buyukev = client.channels.cache.get(`749813389383172106`);
 	let kampatesi = client.channels.cache.get(`749813476977016883`);
 	let yemeksalonu = client.channels.cache.get(`749813424703406164`);
+	let revir = client.channels.cache.get(`758762067485261884`);
+	let antremansahasi = client.channels.cache.get(`758762169923272775`);
 
 	//Zeus Kulübesi
 	let zeuskulubesi = client.channels.cache.get(`749817909630599188`);
@@ -160,7 +158,8 @@ client.on('message', async message => {
 
 		if (message.channel.id == kampgirisi.id || message.channel.id == thaliaagaci.id || message.channel.id == kampalani ||
 			message.channel.id == kampsiniri.id || message.channel.id == kampgolu.id || message.channel.id == buyukev.id ||
-			message.channel.id == kampatesi.id || message.channel.id == yemeksalonu.id || message.channel.id == zeuskulubesi.id ||
+			message.channel.id == kampatesi.id || message.channel.id == yemeksalonu.id || message.channel.id == revir.id || message.channel.id == antremansahasi.id || 
+			message.channel.id == zeuskulubesi.id ||
 			message.channel.id == zeusyataklar.id || message.channel.id == poseidonkulubesi.id || message.channel.id == poseidonyataklar.id ||
 			message.channel.id == hadeskulubesi.id || message.channel.id == hadesyataklar.id || message.channel.id == herakulubesi.id ||
 			message.channel.id == herayataklar.id || message.channel.id == hephaestuskulubesi.id || message.channel.id == hephaestusyataklar.id ||
@@ -182,9 +181,7 @@ client.on('message', async message => {
 			let messageUser = await Messages.findOne({
 				userID: message.author.id
 			});
-
-			let beforeChannel = messageUser.lastChannel;
-
+			let channel;
 			let args = message.content.slice().trim().split(/ +/);
 			let number = args.length;
 			if (!messageUser) {
@@ -192,11 +189,14 @@ client.on('message', async message => {
 					userID: message.author.id,
 					messages: 0,
 					name: message.author.username,
-					lastChannel: message.channel.name,
+					lastChannel: message.channel,
 					serverID: message.guild.id,
 				});
 				await messageUser.save().catch(e => console.log(e));
 
+			}else{
+				
+				channel = messageUser.lastChannel;
 			}
 			let logChannel = client.channels.cache.get(`754459813253218324`);
 			if (!logChannel) return message.reply("Kanal yok!");
@@ -204,14 +204,23 @@ client.on('message', async message => {
 			let user = await Messages.findOne({
 				userID: message.author.id
 			}, async (err, dUser) => {
-				dUser.messages += number;
-				dUser.lastChannel = message.channel.name;
+				dUser.messages += number,
+				dUser.lastChannel = message.channel,
 				await dUser.save().catch(e => console.log(e));
 			})
+			let userChannel = message.channel.toString();
+			console.log(userChannel);
 
-			logChannel.send(`${message.author}, ${beforeChannel} kanalından ${user.lastChannel} kanalına geçti.`)
+			if(userChannel != channel && channel != null){
+				logChannel.send(`${message.author}, ${channel} kanalından ${userChannel} kanalına geçti.`)
+			}
+			else if(userChannel === channel){
+				logChannel.send(`${message.author}, ${channel} kanalında rp yapmaya devam ediyor.`)
+			}else{
+				logChannel.send(`${message.author}, ${userChannel} kanalında rp yapmaya başladı.`)
+			}
 
-
+			
 		}
 	}
 	else {
@@ -236,6 +245,22 @@ client.on('message', async message => {
 
 });
 
+client.on('messageDelete', message =>{
+	if(!message.partial){
+		let deletedlogChannel = client.channels.cache.get(`759773645823279124`);
+		if(deletedlogChannel){
+			const embed = new Discord.MessageEmbed()
+			.setTitle('Silinmiş Mesaj')
+			.setDescription(message.content)
+			.setTimestamp()
+			.setColor('#d6f797')
+			.addField('Yazar', message.author)
+			.addField('Silinen Kanal', message.channel)
+			.setFooter('Olympus RPG', 'https://i.hizliresim.com/esuGEM.gif');
+			deletedlogChannel.send(embed);
+		}
 
+	}
+})
 
 client.login(process.env.TOKEN);
