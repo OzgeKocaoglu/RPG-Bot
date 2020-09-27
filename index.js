@@ -355,7 +355,7 @@ client.on('messageDelete', async message => {
 	let diablodagi = client.channels.cache.get(`751490631515504750`);
 	let helendagi = client.channels.cache.get(`751490684900474952`);
 	let pasifikokyanusu = client.channels.cache.get(`751490745558368457`);
-	
+
 	if (!message.partial) {
 		if (message.channel.id == kampgirisi.id || message.channel.id == thaliaagaci.id || message.channel.id == kampalani ||
 			message.channel.id == kampsiniri.id || message.channel.id == kampgolu.id || message.channel.id == buyukev.id ||
@@ -405,7 +405,7 @@ client.on('messageDelete', async message => {
 					.setColor('#d6f797')
 					.addField('Yazar', message.author)
 					.addField('Silinen Kanal', message.channel)
-					.addField('Role play puanı silindi. Güncel puan: ', user.messages)
+					.addField('Role play puanı silindi. Silinen puan: ', number)
 					.setFooter('Olympus RPG', 'https://i.hizliresim.com/esuGEM.gif');
 				logChannel.send(embed);
 			}

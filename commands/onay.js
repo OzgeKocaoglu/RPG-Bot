@@ -18,6 +18,12 @@ module.exports.run = async (client, message, args) =>{
         if(!member) return message.reply("Sunucuda böyle bir kullanıcı yok.");
         if(!member.roles.cache.some(r=>r.name === "✔")){
             member.roles.add("755189227272142859")
+            let logChannel = client.channels.cache.get(`751491106184757384`);
+            if(logChannel){
+            logChannel.send(`${member} kullanıcısının karakter tanıtımı, ${message.author} tarafından onaylandı.`);
+            }else{
+            return message.channel.send("Log kanalı bulunamadı.")
+            }
             return message.reply("Karakter tanıtımı onaylandı. Artık kullanıcı rp yapabilir.");
             
         }else{
