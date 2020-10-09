@@ -14,6 +14,7 @@ module.exports.run = async (client, message, args) =>{
         }catch{
             member = null;
         }
+        args.shift();
         let nickname = args.join(" ");
         if(!nickname) return message.reply({embed: {color: "RED", description: "Bir kullanıcı adı girmeniz gerek!"}});
         let registerChannel = client.channels.cache.get(`755320986508984330`);
@@ -22,7 +23,7 @@ module.exports.run = async (client, message, args) =>{
             member.roles.add("754300516770775143")
             member.roles.add("751059991833608294")
             member.roles.remove("750665374474960929");
-            member.setNickname(`${nickname}`); 
+            member.setNickname(nickname); 
             registerChannel.send(`${message.author} başarılı bir şekilde ${user}'i kaydetti.`);
             return message.reply("Kayıt başarıyla tamamlandı.");
             
