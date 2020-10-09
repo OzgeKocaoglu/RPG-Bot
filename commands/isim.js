@@ -6,30 +6,16 @@ module.exports.run = async (client, message, args) =>{
     if(message.member.roles.cache.some(r => r.name === "Kamp Kılavuzu") || message.member.roles.cache.some(r => r.name === "Rol Denetmeni") || message.member.hasPermission(["MANAGE_MESSAGES", "ADMINISTRATOR"])){
 
         var user = message.mentions.users.first();
-        if(!user) return message.reply("Böyle bir kullanıcı yok.");
+        if(!user) return message.reply({embed: {color: "RED", description: "Böyle bir kullanıcı yok."}});
 
-        var member;
-        try{
-            member = await message.guild.members.fetch(user);
-        }catch{
-            member = null;
-        }
-        let nickname = args;
-        if(!nickname) return message.reply("Kayıt için bir kullanıcı adı giriniz.");
-        let registerChannel = client.channels.cache.get(`755320986508984330`);
-        if(!member) return message.reply("Sunucuda böyle bir kullanıcı yok.");
-        if(!member.roles.cache.some(r=>r.name === "Yarı Tanrı")){
-            member.roles.add("754300516770775143")
-            member.roles.add("751059991833608294")
-            member.roles.remove("750665374474960929");
-            member.setNickname(`${nickname}`); 
-            registerChannel.send(`${message.author} başarılı bir şekilde ${user}'i kaydetti.`);
-            return message.reply("Kayıt başarıyla tamamlandı.");
+        let nickname = args.slice(1).join(" ");
+        if(!nickname) return message.reply({embed: {color: "RED", description: "Bir kullanıcı adı girmeniz gerek!"}});
+
+        let member = message.guild.members.cache.get(user.id);
+
+        await member.setNickname(nickname);
+        return message.reply({embed: {color: "GREEN", description: "Başarılı bir şekilde **${user.tag}**ın kullanıcı adı **${nickname}** olarak değiştirildi.s"}});
             
-        }else{
-            return message.reply("Bu kullanıcının kaydı zaten yapılmış");
-        }
-
       
     }
     else{

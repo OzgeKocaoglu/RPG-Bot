@@ -21,7 +21,6 @@ module.exports.run = async (client, message, args) => {
             console.log(args[i]);
 
         }
-        console.log(reason);
         if (!reason) return message.reply("Uyarı sebebi giriniz");
         message.delete();
         let logChannel = client.channels.cache.get(`751491106184757384`);
