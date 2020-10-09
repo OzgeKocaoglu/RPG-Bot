@@ -14,9 +14,7 @@ module.exports.run = async (client, message, args) => {
        return message.channel.send("Çoktan ebeveynini seçtin melez! Yalnızca bir tane tanrı ebeveynin olabilir. Yarı tanrı olmanın da sınırı var!");
     }
     else{
-        var rand = Math.floor((Math.random() * 15) + 2);
-        var countHades = client.guild.members.roles.fetch({roles: ['']})
-                        
+        var rand = Math.floor((Math.random() * 15) + 2); 
         if (rand == 2) {
             const exampleEmbed = new Discord.MessageEmbed()
                 .setColor('#3d9cad')
@@ -31,8 +29,8 @@ module.exports.run = async (client, message, args) => {
             message.member.roles.add("749817661231202315");
             message.channel.send(exampleEmbed);
         }
-        else if (rand == 1) {
-          /*  const exampleEmbed = new Discord.MessageEmbed()
+        /*  else if (rand == 1) {
+          const exampleEmbed = new Discord.MessageEmbed()
             .setColor('#965547')
             .setTitle('Hades!')
             .setAuthor('Kampa hoşgeldin çaylak!')
@@ -42,9 +40,9 @@ module.exports.run = async (client, message, args) => {
             )
             .setImage('https://i.pinimg.com/originals/c1/a7/d2/c1a7d276a9e9473233410655c9f42e4c.gif')
             .setFooter('Olympus RPG', 'https://i.hizliresim.com/esuGEM.gif');
-            message.member.roles.add("749817481144565831");*/
+            message.member.roles.add("749817481144565831");
             message.channel.send(exampleEmbed);
-        }
+        }*/
         else if (rand == 3) {
             const exampleEmbed = new Discord.MessageEmbed()
             .setColor('#c96c4d')
