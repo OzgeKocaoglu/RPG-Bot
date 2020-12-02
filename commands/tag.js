@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const Messages = require("../models/messages");
 
 module.exports.run = async (client, message, args) =>{
-    return message.reply('ϟ');
+    return message.channel.send('ϟ');
 
 };
 

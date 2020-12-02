@@ -1,8 +1,9 @@
 
 const Discord = require('discord.js');
-const client = new Discord.Client({ disableEveryone: true, partials: ['MESSAGE'] });
+const client = new Discord.Client({ disableEveryone: true, partials: ['MESSAGE', 'REACTION']});
 const fs = require('fs');
 const mongoose = require('mongoose');
+const roleClaim = require('./role-claim');
 
 mongoose.connect(process.env.mongoPass, {
 	useNewUrlParser: true,
@@ -38,11 +39,10 @@ client.on('ready', async () => {
 	console.log(`${client.user.username} is online`);
 	client.user.setStatus('idle');
 	client.user.setActivity(`with Percy Jackson RPG!`);
-
+	roleClaim(client);
 })
 
 client.on('message', async message => {
-
 	//Melez Kampı.
 	let kampgirisi = client.channels.cache.get(`749813518655815771`);
 	let thaliaagaci = client.channels.cache.get(`749813333867364403`);
@@ -428,5 +428,6 @@ client.on('messageDelete', async message => {
 
 	}
 })
+
 
 client.login(process.env.TOKEN);
