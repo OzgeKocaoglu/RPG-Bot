@@ -142,10 +142,53 @@ or
   <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/roleplaylogs.png" alt="logo" width="500" height="auto" />
 
 ```
-!duyuru + message
+!denetlendi
 ```
 
-<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/duyuru.png" alt="logo" width="500" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/roleplayplace.png" alt="logo" width="500" height="auto" />
 
 
+<!-- Economy -->
+## :technologist: Economy
 
+<div align="left">
+  <h3>General Commands</h3>
+  </div>
+  **Drahmi**: Returns drahmi info
+```
+!drami
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/drami.png" alt="logo" width="500" height="auto" />
+  
+**Balance**: Returns user current bank account balance.
+```
+!b
+```
+
+or
+
+```
+!bakiye 
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/balance.png" alt="logo" width="500" height="auto" />
+<br />
+
+**Send Money**: Send money to the given username
+```
+!pv + @username + money amount
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/moneytransition.png" alt="logo" width="500" height="auto" />
+<br />
+
+<div align="left">
+  <h3>Pets</h3>
+  </div>
+  
+**Cat**: User can adopt a cat using that command and this command add ''Cat'' perm to the user. 
+
+```
+!kedi
+```
