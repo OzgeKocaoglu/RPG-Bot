@@ -4,5 +4,5 @@
   <h1>Prometheus</h1>
   
   <p>
-    Prometheus is a percy jackson rpg discord bot for your servers!
+   :zap: Prometheus is a percy jackson rpg discord bot for your servers!
   </p>
