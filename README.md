@@ -64,4 +64,24 @@
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/demeter.png" alt="logo" width="400" height="auto" />
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/persephone.png" alt="logo" width="400" height="auto" />
 
+<br />
 
+:wales: **Tag**: Returns server tag
+```
+!tag
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/tag.png" alt="logo" width="300" height="auto" />
+
+<div align="left">
+  <h3>:hammer: Moderator Commands</h3>
+  </div>
+ 
+  
+ **Registeration**: Registers users. 
+ 
+ User gets ''Çaylak'' (Newbie) and "Melez Kampı" (Camp Half-Blood) + "Yarı Tanrı" (Demigod) perms.
+ 
+```
+!kayıt = !kayıt + @username + name and age
+```
