@@ -5,6 +5,7 @@
   
   <p>
    :zap: Prometheus is a percy jackson rpg discord bot for your servers!
+    Sorry but bot is Turkish but if you want i can convert to the english.
   </p>
 
 <h4>
@@ -85,3 +86,66 @@
 ```
 !kayıt = !kayıt + @username + name and age
 ```
+
+ **Rename Free**: Free of charge rename. 
+
+ 
+```
+ !isim = !isim + @username + new name
+```
+
+ **Rename**: User can use rename option with spending 50 drahmi.
+
+```
+  !isim2 = !isim2 + @username + new name
+```
+
+or
+
+```
+   !isimdegistir
+   !isim-degistir
+   !ödemeli
+```
+
+ **Check**: Mods checks the roleplay channels and if they decide that everything is all right then they will print this command and this command creates a log.
+
+```
+  !denetlendi
+```
+
+ **Warn**: Insert a warn to the user profile because of the role play rule violation.
+
+```
+  !rpuyari + @username + reason
+```
+
+<div align="left">
+  <h3>:loudspeaker: Announcement Commands</h3>
+  </div>
+ 
+  
+ **Announcement**: Creates an announcement. 
+
+```
+!duyuru + message
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/duyuru.png" alt="logo" width="500" height="auto" />
+
+<div align="left">
+  <h3>:electric_plug: User Channel Switching Control</h3>
+  </div>
+ 
+  Moderators and Admins can see and control users rpg process with this system. And creates logs for other admins.
+  
+  <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/roleplaylogs.png" alt="logo" width="500" height="auto" />
+
+```
+!duyuru + message
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/duyuru.png" alt="logo" width="500" height="auto" />
+
+
+
