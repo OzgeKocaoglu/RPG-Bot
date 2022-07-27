@@ -47,13 +47,21 @@
   </div>
   
 :couplekiss_man_woman: **Parent**: Specify user parent god or goddess.
-<br />
-<br />
-<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/icon.png" alt="logo" width="200" height="auto" />
-<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/icon.png" alt="logo" width="200" height="auto" />
-
-
-
 ```
 !parent
 ```
+<br />
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/artemis.png" alt="logo" width="400" height="auto" /> <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/ares.png" alt="logo" width="400" height="auto" /> <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/dionysos.png" alt="logo" width="400" height="auto" /> <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/athena.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/hades.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/hermes.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/hekate.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/hephaestus.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/poseidon.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/apollon.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/afrodit.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/zeus.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/demeter.png" alt="logo" width="400" height="auto" />
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/persephone.png" alt="logo" width="400" height="auto" />
+
+
