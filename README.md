@@ -1,6 +1,6 @@
 <div align="center">
 
-  <img src="assets/logo.png" alt="logo" width="200" height="auto" />
+  <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/icon.png" alt="logo" width="200" height="auto" />
   <h1>Prometheus</h1>
   
   <p>
