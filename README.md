@@ -4,8 +4,9 @@
   <h1>Prometheus</h1>
   
   <p>
-   :zap: Prometheus is a percy jackson rpg discord bot for your servers!
+   :zap: Prometheus is a percy jackson rpg discord bot for your servers! 
     Sorry but bot is Turkish but if you want i can convert to the english.
+    I use MongoDB for database
   </p>
 
 <h4>
