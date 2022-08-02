@@ -353,7 +353,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/ivliv.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Persephone's pearls*: User can buy Persephone's pearls in exchange for 1500 drami. 
+**Persephone's pearls**: User can buy Persephone's pearls in exchange for 1500 drami. 
 
 ```
 !persephoneincileri
