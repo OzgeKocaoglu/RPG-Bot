@@ -155,7 +155,8 @@ or
 <div align="left">
   <h3>General Commands</h3>
   </div>
-  **Drahmi**: Returns drahmi info
+  
+**Drahmi**: Returns drahmi info
   
 ```
 !drami
@@ -256,4 +257,108 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/fox.png" alt="logo" width="800" height="auto" />
 <br />
 
+
+<div align="left">
+  <h3>Special Items</h3>
+  </div>
+  
+**Winged Shoes**: User can buy winged shoes in exchange for 300 drami. 
+
+```
+!kanatlıayakkabılar
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/wingedshoes.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Hermes's vitamins**: User can buy Hermes's vitamins in exchange for 400 drami. 
+
+```
+!hermesinvitaminleri
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/vitaminsofhermes.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Invisibility Hat**: User can buy Invisibility Hat in exchange for 500 drami. 
+
+```
+!görünmezlikşapkası
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/invisiblityhat.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Poisoned arrows**: User can buy poisoned arrows in exchange for 300 drami. 
+
+```
+!gazok
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/poisonedarrows.png" alt="logo" width="800" height="auto" />
+<br />
+
+
+**Sonic Arrows**: User can buy Sonic Arrows in exchange for 400 drami. 
+
+```
+!sonikok
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/sonicarrow.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Arm Shield**: User can buy arm shield in exchange for 500 drami. 
+
+```
+!kolkalkanı
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/armshield.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Piper's Dagger**: User can buy Piper's Dagger in exchange for 1000 drami. 
+
+```
+!piperhançer
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/piper'sdagger.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Mark of Athena**: User can buy Mark of Athena in exchange for 1000 drami. 
+
+```
+!athenanınizi
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/markofathena.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Riptide**: User can buy Riptide in exchange for 1500 drami. 
+
+```
+!riptide
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/riptide.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Ivlivs**: User can buy ivlivs in exchange for 1500 drami. 
+
+```
+!ivlivs
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/ivliv.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Persephone's pearls*: User can buy Persephone's pearls in exchange for 1500 drami. 
+
+```
+!persephoneincileri
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/pearlsofpersephone.png" alt="logo" width="800" height="auto" />
+<br />
 
