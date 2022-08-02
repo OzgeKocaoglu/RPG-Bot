@@ -156,6 +156,7 @@ or
   <h3>General Commands</h3>
   </div>
   **Drahmi**: Returns drahmi info
+  
 ```
 !drami
 ```
@@ -163,6 +164,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/drami.png" alt="logo" width="500" height="auto" />
   
 **Balance**: Returns user current bank account balance.
+
 ```
 !b
 ```
@@ -177,6 +179,7 @@ or
 <br />
 
 **Send Money**: Send money to the given username
+
 ```
 !pv + @username + money amount
 ```
@@ -193,3 +196,64 @@ or
 ```
 !kedi
 ```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/cat.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Dog**: User can adopt a dog using that command and this command add ''Dog'' perm to the user. 
+
+```
+!kopek
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/dog.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Snake**: User can adopt a snake using that command and this command add ''Snake'' perm to the user. 
+
+```
+!yılan
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/snake.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Brown Horse**: User can adopt a brown horse using that command and this command add ''Brown Horse'' perm to the user. 
+
+```
+!atboz
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/horsebrown.png" alt="logo" width="800" height="auto" />
+<br />
+
+
+
+**Black Horse**: User can adopt a black horse using that command and this command add ''Black Horse'' perm to the user. 
+
+```
+!atsiyah
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/blackhorse.png" alt="logo" width="800" height="auto" />
+<br />
+
+**White Horse**: User can adopt a white horse using that command and this command add ''White Horse'' perm to the user. 
+
+```
+!atbeyaz
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/horsewhite.png" alt="logo" width="800" height="auto" />
+<br />
+
+**Fox**: User can adopt a fox using that command and this command add ''Fox'' perm to the user. 
+
+```
+!tilki
+```
+
+<img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/fox.png" alt="logo" width="800" height="auto" />
+<br />
+
+
