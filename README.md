@@ -4,7 +4,7 @@
   <h1>Prometheus</h1>
   
   <p>
-   :zap: Prometheus is a percy jackson rpg discord bot for your servers! 
+   :zap: :trident: Prometheus is a percy jackson rpg discord bot for your servers! 
     Sorry but bot is Turkish but if you want i can convert to the english.
     I use MongoDB for database
   </p>
@@ -80,7 +80,7 @@
   </div>
  
   
- **Registeration**: Registers users. 
+ :mechanic: **Registeration**: Registers users. 
  
  User gets ''Çaylak'' (Newbie) and "Melez Kampı" (Camp Half-Blood) + "Yarı Tanrı" (Demigod) perms.
  
@@ -95,7 +95,7 @@
  !isim = !isim + @username + new name
 ```
 
- **Rename**: User can use rename option with spending 50 drahmi.
+:construction: **Rename**: User can use rename option with spending 50 drahmi.
 
 ```
   !isim2 = !isim2 + @username + new name
@@ -109,13 +109,13 @@ or
    !ödemeli
 ```
 
- **Check**: Mods checks the roleplay channels and if they decide that everything is all right then they will print this command and this command creates a log.
+:heavy_check_mark: **Check**: Mods checks the roleplay channels and if they decide that everything is all right then they will print this command and this command creates a log.
 
 ```
   !denetlendi
 ```
 
- **Warn**: Insert a warn to the user profile because of the role play rule violation.
+ :warning: **Warn**: Insert a warn to the user profile because of the role play rule violation.
 
 ```
   !rpuyari + @username + reason
@@ -126,7 +126,7 @@ or
   </div>
  
   
- **Announcement**: Creates an announcement. 
+:mega: **Announcement**: Creates an announcement. 
 
 ```
 !duyuru + message
@@ -150,7 +150,7 @@ or
 
 
 <!-- Economy -->
-## :technologist: Economy
+## :balance_scale: Economy
 
 <div align="left">
   <h3>General Commands</h3>
@@ -164,7 +164,7 @@ or
 
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/drami.png" alt="logo" width="500" height="auto" />
   
-**Balance**: Returns user current bank account balance.
+:moneybag: **Balance**: Returns user current bank account balance.
 
 ```
 !b
@@ -179,7 +179,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/balance.png" alt="logo" width="500" height="auto" />
 <br />
 
-**Send Money**: Send money to the given username
+:money_with_wings: **Send Money**: Send money to the given username
 
 ```
 !pv + @username + money amount
@@ -192,7 +192,7 @@ or
   <h3>Pets</h3>
   </div>
   
-**Cat**: User can adopt a cat using that command and this command add ''Cat'' perm to the user. 
+:cat: **Cat**: User can adopt a cat using that command and this command add ''Cat'' perm to the user. 
 
 ```
 !kedi
@@ -201,7 +201,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/cat.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Dog**: User can adopt a dog using that command and this command add ''Dog'' perm to the user. 
+:dog: **Dog**: User can adopt a dog using that command and this command add ''Dog'' perm to the user. 
 
 ```
 !kopek
@@ -210,7 +210,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/dog.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Snake**: User can adopt a snake using that command and this command add ''Snake'' perm to the user. 
+:snake: **Snake**: User can adopt a snake using that command and this command add ''Snake'' perm to the user. 
 
 ```
 !yılan
@@ -219,7 +219,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/snake.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Brown Horse**: User can adopt a brown horse using that command and this command add ''Brown Horse'' perm to the user. 
+:horse: **Brown Horse**: User can adopt a brown horse using that command and this command add ''Brown Horse'' perm to the user. 
 
 ```
 !atboz
@@ -230,7 +230,7 @@ or
 
 
 
-**Black Horse**: User can adopt a black horse using that command and this command add ''Black Horse'' perm to the user. 
+:horse: **Black Horse**: User can adopt a black horse using that command and this command add ''Black Horse'' perm to the user. 
 
 ```
 !atsiyah
@@ -239,7 +239,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/blackhorse.png" alt="logo" width="800" height="auto" />
 <br />
 
-**White Horse**: User can adopt a white horse using that command and this command add ''White Horse'' perm to the user. 
+:horse: **White Horse**: User can adopt a white horse using that command and this command add ''White Horse'' perm to the user. 
 
 ```
 !atbeyaz
@@ -248,7 +248,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/horsewhite.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Fox**: User can adopt a fox using that command and this command add ''Fox'' perm to the user. 
+:fox_face: **Fox**: User can adopt a fox using that command and this command add ''Fox'' perm to the user. 
 
 ```
 !tilki
@@ -259,10 +259,10 @@ or
 
 
 <div align="left">
-  <h3>Special Items</h3>
+  <h3>:yo_yo: Special Items</h3>
   </div>
   
-**Winged Shoes**: User can buy winged shoes in exchange for 300 drami. 
+:ballet_shoes: **Winged Shoes**: User can buy winged shoes in exchange for 300 drami. 
 
 ```
 !kanatlıayakkabılar
@@ -271,7 +271,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/wingedshoes.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Hermes's vitamins**: User can buy Hermes's vitamins in exchange for 400 drami. 
+	:pill: **Hermes's vitamins**: User can buy Hermes's vitamins in exchange for 400 drami. 
 
 ```
 !hermesinvitaminleri
@@ -280,7 +280,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/vitaminsofhermes.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Invisibility Hat**: User can buy Invisibility Hat in exchange for 500 drami. 
+:tophat: **Invisibility Hat**: User can buy Invisibility Hat in exchange for 500 drami. 
 
 ```
 !görünmezlikşapkası
@@ -289,7 +289,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/invisiblityhat.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Poisoned arrows**: User can buy poisoned arrows in exchange for 300 drami. 
+:bow_and_arrow: **Poisoned arrows**: User can buy poisoned arrows in exchange for 300 drami. 
 
 ```
 !gazok
@@ -299,7 +299,7 @@ or
 <br />
 
 
-**Sonic Arrows**: User can buy Sonic Arrows in exchange for 400 drami. 
+:bow_and_arrow: **Sonic Arrows**: User can buy Sonic Arrows in exchange for 400 drami. 
 
 ```
 !sonikok
@@ -308,7 +308,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/sonicarrow.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Arm Shield**: User can buy arm shield in exchange for 500 drami. 
+	:shield: **Arm Shield**: User can buy arm shield in exchange for 500 drami. 
 
 ```
 !kolkalkanı
@@ -317,7 +317,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/armshield.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Piper's Dagger**: User can buy Piper's Dagger in exchange for 1000 drami. 
+:dagger: **Piper's Dagger**: User can buy Piper's Dagger in exchange for 1000 drami. 
 
 ```
 !piperhançer
@@ -326,7 +326,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/piper'sdagger.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Mark of Athena**: User can buy Mark of Athena in exchange for 1000 drami. 
+:cactus: **Mark of Athena**: User can buy Mark of Athena in exchange for 1000 drami. 
 
 ```
 !athenanınizi
@@ -335,7 +335,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/markofathena.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Riptide**: User can buy Riptide in exchange for 1500 drami. 
+:probing_cane: **Riptide**: User can buy Riptide in exchange for 1500 drami. 
 
 ```
 !riptide
@@ -344,7 +344,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/riptide.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Ivlivs**: User can buy ivlivs in exchange for 1500 drami. 
+:nut_and_bolt: **Ivlivs**: User can buy ivlivs in exchange for 1500 drami. 
 
 ```
 !ivlivs
@@ -353,7 +353,7 @@ or
 <img src="https://github.com/OzgeKocaoglu/prometheus/blob/master/icons/ivliv.png" alt="logo" width="800" height="auto" />
 <br />
 
-**Persephone's pearls**: User can buy Persephone's pearls in exchange for 1500 drami. 
+:sparkler: **Persephone's pearls**: User can buy Persephone's pearls in exchange for 1500 drami. 
 
 ```
 !persephoneincileri
