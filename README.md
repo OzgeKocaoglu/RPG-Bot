@@ -6,7 +6,7 @@
   <p>
    :zap: :trident: Prometheus is a percy jackson rpg discord bot for your servers! 
     Sorry but bot is Turkish but if you want i can convert to the english.
-    I use MongoDB for database
+    I use MongoDB for database.
   </p>
 
 <h4>
